@@ -3,6 +3,10 @@ var view = {
     var messageArea = document.getElementById("messageArea");
     messageArea.innterHTML = msg;
   },
+  hellp: function(lol) {
+    var hellp = document.getElementById("hellp");
+    hellp.innerHTML = lol;
+  },
   displayHit: function(location) {
     var cell = document.getElementById(location);
     cell.setAttribute("class", "hit");
@@ -21,3 +25,4 @@ view.displayMiss("25");
 view.displayHit("26");
 
 view.displayMessage("Tap tap, is this thing on?");
+view.hellp("oi");
