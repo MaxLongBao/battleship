@@ -1,11 +1,7 @@
 var view = {
   displayMessage: function(msg) {
     var messageArea = document.getElementById("messageArea");
-    messageArea.innterHTML = msg;
-  },
-  hellp: function(lol) {
-    var hellp = document.getElementById("hellp");
-    hellp.innerHTML = lol;
+    messageArea.innerHTML = msg;
   },
   displayHit: function(location) {
     var cell = document.getElementById(location);
@@ -25,4 +21,3 @@ view.displayMiss("25");
 view.displayHit("26");
 
 view.displayMessage("Tap tap, is this thing on?");
-view.hellp("oi");
