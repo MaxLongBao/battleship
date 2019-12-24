@@ -24,6 +24,17 @@ var model = {
     { locations: ["24", "34", "44"], hits: ["", "", ""] },
     { locations: ["10", "11", "12"], hits: ["", "", ""] }],
 
+  generateShipLocations: function() {
+    var locations;
+    for (var i = 0; i < this.numShips; i++) {
+      do {
+        locations = this.generateShip();
+        while (this.collision(locations));
+      }
+      this.ships[i].locations = locations;
+    }
+  }
+
   fire: function(guess) {
     for (var i = 0; i < this.numShips; i++) {
       var ship = this.ships[i];
