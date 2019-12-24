@@ -96,7 +96,10 @@ function init() {
 }
 
 function handleFireButton() {
-  //code
+  var guessInput = document.getElementById("guessInput");
+  var guess = guessInput.value;
+  controller.processGuess(guess);
+  guessInput.value = "";
 }
 
 window.onload = init;
@@ -116,13 +119,13 @@ window.onload = init;
 // console.log(parseGuess("H0"));
 // console.log(parseGuess("A7"));
 
-model.fire("53");
-model.fire("06");
-model.fire("16");
-model.fire("26");
-model.fire("34");
-model.fire("24");
-model.fire("44");
-model.fire("12");
-model.fire("11");
-model.fire("10");
+// model.fire("53");
+// model.fire("06");
+// model.fire("16");
+// model.fire("26");
+// model.fire("34");
+// model.fire("24");
+// model.fire("44");
+// model.fire("12");
+// model.fire("11");
+// model.fire("10");
