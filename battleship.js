@@ -89,6 +89,17 @@ function parseGuess(guess) {
   }
   return null;
 }
+
+function init() {
+  var fireButton = document.getElementById("fireButton");
+  fireButton.onclick = handleFireButton;
+}
+
+function handleFireButton() {
+  //code
+}
+
+window.onload = init;
 // testing
 // view.displayMiss("00");
 // view.displayHit("34");
