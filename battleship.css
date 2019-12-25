@@ -5,9 +5,10 @@ body {
 div#board {
   position: relative;
   width: 1024px;
-  height: 863px;
+  height: 675px;
   margin: auto;
   background: url("images/board.jpg") no-repeat;
+  background-size: 842px 708px;
 }
 
 div#messageArea {
@@ -15,24 +16,25 @@ div#messageArea {
   top: 0px;
   left: 0px;
   color: rgb(83, 175, 19);
+  font-size: 30px;
 }
 
 table {
   position: absolute;
-  left: 173px;
-  top: 98px;
+  left: 140px;
+  top: 79px;
   border-spacing: 0px;
 }
 
 td {
-  width: 94px;
-  height: 94px;
+  width: 77px;
+  height: 77px;
 }
 
 form {
   position: absolute;
-  bottom: 0px;
-  right: 0px;
+  bottom: 20px;
+  left: 700px;
   padding: 15px;
   background-color: rgb(83, 175, 19);
 }
@@ -45,8 +47,10 @@ form input {
 
 .hit {
   background: url("images/ship.png") no-repeat center center;
+  background-size: 70px 20px;
 }
 
 .miss {
   background: url("images/miss.png") no-repeat center center;
+  background-size: 70px 30px;
 }
