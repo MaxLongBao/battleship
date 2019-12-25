@@ -1,4 +1,4 @@
-// implementing the view
+//View
 var view = {
   displayMessage: function(msg) {
     var messageArea = document.getElementById("messageArea");
@@ -14,7 +14,7 @@ var view = {
   }
 };
 
-// implementing the model
+//Model
 var model = {
   boardSize: 7,
   numShips: 3,
@@ -33,7 +33,29 @@ var model = {
       }
       this.ships[i].locations = locations;
     }
-  }
+  },
+
+  generateShip: function() {
+    var direction = Math.floor(Math.random() * 2);
+    var row;
+    var col;
+    if (direction === 1) {
+      row = Math.floor(Math.random() * this.boardSize);
+      col = Math.floor(Math.random() * (this.boardSize - (this.shipLength + 1)))
+    } else {
+      row = Math.floor(Math.random() * (this.boardSize - (this.shipLength + 1)))
+      col = Math.floor(Math.random() * this.boardSize);
+    }
+    var newShipLocations = [];
+    for (var i = 0; i < this.shipLength; i++) {
+      if (direction === 1) {
+        newShipLocations.push(row + "" + (col + i));
+      } else {
+        newShipLocations.push((row + i) + "" + col);
+      }
+    }
+    return newShipLocations;
+  },
 
   fire: function(guess) {
     for (var i = 0; i < this.numShips; i++) {
@@ -64,6 +86,7 @@ var model = {
   }
 };
 
+//Controller
 var controller = {
   guesses: 0,
   processGuess: function(guess) {
