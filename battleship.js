@@ -29,8 +29,7 @@ var model = {
     for (var i = 0; i < this.numShips; i++) {
       do {
         locations = this.generateShip();
-        while (this.collision(locations));
-      }
+      } while (this.collision(locations));
       this.ships[i].locations = locations;
     }
   },
@@ -67,7 +66,7 @@ var model = {
       }
     }
     return false;
-  }
+  },
 
   fire: function(guess) {
     for (var i = 0; i < this.numShips; i++) {
